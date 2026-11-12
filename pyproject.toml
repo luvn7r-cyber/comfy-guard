@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "comfy-guard"
+version = "0.1.0"
+description = "Per-plugin dependency rollback, commit-pinned lockfiles, and 10x faster cloud GPU sync for ComfyUI — built for Humans & AI Agents."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [{name = "ALEX"}]
+keywords = ["comfyui", "dependency-manager", "rollback", "colab", "ai-agent", "skill"]
+dependencies = []
+
+[project.scripts]
+comfy-guard = "comfy_guard.cli:main"
+cguard = "comfy_guard.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["comfy_guard*"]
